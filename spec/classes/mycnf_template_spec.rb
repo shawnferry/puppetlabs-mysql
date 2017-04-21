@@ -10,11 +10,15 @@ describe 'mysql::server' do
       context 'normal entry' do
         let(:params) { { override_options: { 'mysqld' => { 'socket' => '/var/lib/mysql/mysql.sock' } } } }
 
-        it do
-          is_expected.to contain_file('mysql-config-file').with(mode: '0644',
-                                                                selinux_ignore_defaults: true).with_content(%r{socket = \/var\/lib\/mysql\/mysql.sock})
+        context 'normal entry' do
+          let(:params) {{ :override_options => { 'mysqld' => { 'socket' => '/var/lib/mysql/mysql.sock' } } }}
+          it do
+            is_expected.to contain_file('mysql-config-file').with({
+              :mode                    => '0644',
+              :selinux_ignore_defaults => true,
+            }).with_content(/socket = \/var\/lib\/mysql\/mysql.sock/)
+          end
         end
-      end
 
       describe 'array entry' do
         let(:params) { { override_options: { 'mysqld' => { 'replicate-do-db' => %w[base1 base2] } } } }
