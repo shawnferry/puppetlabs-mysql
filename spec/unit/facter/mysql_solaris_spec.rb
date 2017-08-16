@@ -47,17 +47,17 @@ describe Facter::Util::Fact do
       end
       context 'major_dot_minor' do
         it {
-          expect(Facter.fact(:mysql_solaris).value['major_dot_minor']).to eq('5.5')
+          expect(Facter.fact(:mysql_solaris).value['major_dot_minor']).to eq('5.7')
         }
       end
       context 'basedir' do
         it {
-          expect(Facter.fact(:mysql_solaris).value['basedir']).to eq('/usr/mysql/5.5')
+          expect(Facter.fact(:mysql_solaris).value['basedir']).to eq('/usr/mysql/5.7')
         }
       end
       context 'major_minor' do
         it {
-          expect(Facter.fact(:mysql_solaris).value['major_minor']).to eq('55')
+          expect(Facter.fact(:mysql_solaris).value['major_minor']).to eq('57')
         }
       end
     end
