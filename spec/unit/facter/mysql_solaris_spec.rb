@@ -5,8 +5,8 @@ describe Facter::Util::Fact do
     Facter.clear
     Facter.stubs(:value).with(:kernel).returns('SunOS')
     Facter.stubs(:value).with('os').returns(
-      {"name"=>"Solaris", "family"=>"Solaris", "release"=>{"major"=>"12",
-      "minor"=>"0", "full"=>"12.0"}}
+      {"name"=>"Solaris", "family"=>"Solaris", "release"=>{"major"=>"5",
+      "minor"=>"11", "full"=>"5.11"}}
      )
     # Stubbed osfamily fails without stubbed 'os'
     Facter.stubs(:value).with(:osfamily).returns('Solaris')
