@@ -11,6 +11,10 @@
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#. ./manifests/server.pp:48
+msgid "old_root_password is no longer used and will be removed in a future release"
+msgstr ""
+
 #. metadata.json
 #: .summary
 msgid "Installs, configures, and manages the MySQL service."

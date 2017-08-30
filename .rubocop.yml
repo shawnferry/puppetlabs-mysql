@@ -106,3 +106,7 @@ Style/IfUnlessModifier:
   Enabled: false
 Style/SymbolProc:
   Enabled: false
+GetText/DecorateString:
+  Enabled: false
+GetText/DecorateFunctionMessage:
+  Enabled: true
