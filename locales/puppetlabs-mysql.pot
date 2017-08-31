@@ -12,7 +12,9 @@
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #. ./manifests/server.pp:48
-msgid "old_root_password is no longer used and will be removed in a future release"
+msgid ""
+"The `old_root_password` attribute is no longer used and will be removed in a f"
+"uture release."
 msgstr ""
 
 #. metadata.json
