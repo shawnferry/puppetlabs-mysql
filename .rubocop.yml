@@ -13,7 +13,8 @@ AllCops:
   - Gemfile
   - Rakefile
   - pkg/**/*
-  - spec/fixtures/**/*
+#  - spec/fixtures/**/*
+  - spec/**/*
   - vendor/**/*
 Metrics/LineLength:
   Description: People have wide screens, use them.
