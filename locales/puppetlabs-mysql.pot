@@ -11,6 +11,56 @@
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#. ./manifests/bindings/client_dev.pp:12
+msgid "No MySQL client development package configured for %{os}."
+msgstr ""
+
+#. ./manifests/bindings/daemon_dev.pp:12
+msgid "No MySQL daemon development package configured for %{os}."
+msgstr ""
+
+#. ./manifests/bindings.pp:38
+msgid ""
+"::mysql::bindings::java cannot be managed by puppet on %{osfamily} as it is no"
+"t in official repositories. Please disable java mysql binding."
+msgstr ""
+
+#. ./manifests/bindings.pp:40
+msgid ""
+"::mysql::bindings::php does not need to be managed by puppet on %{osfamily} as"
+" it is included in mysql package by default."
+msgstr ""
+
+#. ./manifests/bindings.pp:42
+msgid ""
+"::mysql::bindings::ruby cannot be managed by puppet on %{osfamily} as it is no"
+"t in official repositories. Please disable ruby mysql binding."
+msgstr ""
+
+#. ./manifests/params.pp:124
+msgid ""
+"Unsupported platform: puppetlabs-%{module_name} currently doesn't support %{os"
+"}"
+msgstr ""
+
+#. ./manifests/params.pp:381
+msgid ""
+"Unsupported platform: puppetlabs-%{module_name} currently doesn't support %{"
+"osfamily} or %{os}"
+msgstr ""
+
+#. ./manifests/params.pp:465
+msgid ""
+"Unsupported platform: puppetlabs-%{module_name} only supports RedHat 5.0 and b"
+"eyond"
+msgstr ""
+
+#. ./manifests/server/backup.pp:28
+msgid ""
+"The 'prescript' option is not currently implemented for the %{provider} backup"
+" provider."
+msgstr ""
+
 #. ./manifests/server.pp:48
 msgid ""
 "The `old_root_password` attribute is no longer used and will be removed in a f"
@@ -121,7 +171,7 @@ msgid "#mysql had an error ->  %{inspect}"
 msgstr ""
 
 #: ./lib/puppet/provider/mysql_user/mysql.rb:125
-msgid "Only mysql_native_password (*ABCD...XXX) hashes are supported."
+msgid "Only mysql_native_password (*ABCD..XXX) hashes are supported."
 msgstr ""
 
 #: ./lib/puppet/type/mysql_grant.rb:34
@@ -159,6 +209,10 @@ msgstr ""
 msgid "Invalid database user %{user}."
 msgstr ""
 
+#: ./lib/puppet/type/mysql_grant.rb:96 ./lib/puppet/type/mysql_user.rb:29
+msgid "Invalid database user %{user}"
+msgstr ""
+
 #: ./lib/puppet/type/mysql_grant.rb:102 ./lib/puppet/type/mysql_user.rb:34
 msgid "MySQL usernames are limited to a maximum of 16 characters."
 msgstr ""
@@ -179,4 +233,8 @@ msgstr ""
 
 #: ./lib/puppet/type/mysql_user.rb:87
 msgid "Invalid tls option %{option}."
+msgstr ""
+
+#: ./lib/puppet/type/mysql_user.rb:87
+msgid "Invalid tls option %{option}"
 msgstr ""
