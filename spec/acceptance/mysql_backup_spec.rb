@@ -51,12 +51,6 @@ describe 'mysql::server::backup class' do
       unless version_is_greater_than('5.7.0')
         shell('ls -l /tmp/backups/mysql_backup_*-*.sql.bz2 | wc -l') do |r|
           expect(r.stdout).to match(%r{1})
-        end
-      end
-    end
-    it 'dumps all databases to single file #exit code' do
-      if version_is_greater_than('5.7.0')
-        shell('ls -l /tmp/backups/mysql_backup_*-*.sql.bz2 | wc -l') do |r|
           expect(r.exit_code).to be_zero
         end
       end
@@ -74,12 +68,6 @@ describe 'mysql::server::backup class' do
         unless version_is_greater_than('5.7.0')
           shell('ls -l /tmp/backups/mysql_backup_*-*.sql.bz2 | wc -l') do |r|
             expect(r.stdout).to match(%r{2})
-          end
-        end
-      end
-      it 'creates at least one backup tarball #exit code' do
-        unless version_is_greater_than('5.7.0')
-          shell('ls -l /tmp/backups/mysql_backup_*-*.sql.bz2 | wc -l') do |r|
             expect(r.exit_code).to be_zero
           end
         end
@@ -139,12 +127,6 @@ describe 'mysql::server::backup class' do
           %w[backup1 backup2].each do |database|
             shell("ls -l /tmp/backups/mysql_backup_#{database}_*-*.sql.bz2 | wc -l") do |r|
               expect(r.stdout).to match(%r{1})
-            end
-          end
-        end
-        it 'wcreates one file per database #exit code' do # rubocop:disable RSpec/RepeatedExample
-          unless version_is_greater_than('5.7.0')
-            shell("ls -l /tmp/backups/mysql_backup_#{database}_*-*.sql.bz2 | wc -l") do |r|
               expect(r.exit_code).to be_zero
             end
           end

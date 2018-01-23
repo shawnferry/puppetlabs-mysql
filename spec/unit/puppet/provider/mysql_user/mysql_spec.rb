@@ -278,6 +278,7 @@ usvn_user@localhost
   end
 
   describe 'plugin=' do
+    # rubocop:disable RSpec/NestedGroups
     context 'auth_socket' do
       context 'MySQL < 5.7.6' do
         it 'changes the authentication plugin' do
