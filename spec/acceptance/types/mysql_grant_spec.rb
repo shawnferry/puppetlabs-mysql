@@ -455,7 +455,6 @@ describe 'mysql_grant' do
   end
 
   describe 'adding function privileges' do
-    # rubocop:disable RSpec/ExampleLength
     it 'works without errors' do
       pp = <<-EOS
         exec { 'simplefunc-create':
